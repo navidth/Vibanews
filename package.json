@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@majidh1/jalalidatepicker": "^0.9.4",
     "date-fns": "^2.30.0",
     "eslint": "^8.54.0",
     "moment-jalaali": "^0.10.0"

@@ -3,20 +3,170 @@
     font-size: 13px;
     color: rgb(108,117,125)
 }
-.register-form{
-    background-image: url('../img/graph.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 650px;
-    height: 490px;
-}
-.lottory-wheels{
-    position: absolute;
-}
 .lottory-wheels svg {
-    width: 250px;
-    height: 250px;
-    margin-right: 155px;
-    margin-top: 85px;
+    width: 180px;
+    height: 180px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.main-register{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 80%;
+}
+.form-register{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 16px;
+}
+.input-group{
+ align-items: center;
+}
+.input-group:nth-child(odd){
+    grid-column: 1/7;
+}
+.input-group:nth-child(even){
+    grid-column:7/13;
+}
+
+.input-group:nth-child(1){
+    grid-column: 1/7;
+}
+
+.input-group:nth-child(2){
+    grid-column: 7/13;
+}
+.input-group:nth-child(5){
+    grid-column: 1/7;
+}
+.input-group:nth-child(6){
+    grid-column: 7/13;
+}
+.input-group:nth-child(7){
+    grid-column: 1/7;
+}
+.input-group:nth-child(8){
+    grid-column: 7/13;
+}
+.input-group:nth-child(9){
+   grid-column: 1/7;
+}
+.input-group:nth-child(10){
+    grid-column: 7/10;
+}
+.input-group:nth-child(11){
+    grid-column: 10/13;
+}
+.input-group:nth-child(12){
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 25px;
+}
+.form-img{
+    grid-column:7/13;
+}
+.input-group-text{
+    border:  #3929bc;
+    background-color:  #3929bc;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.input-group input{
+    font-size: 14px;
+}
+.span-input-group-text{
+    box-shadow: none;
+}
+.form-control{
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
+}
+.choice-img{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.submit{
+    grid-column: 1/13;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.submit button{
+    padding: 20px 40px;
+   background-color: #3929bc;
+   color: white;
+   transition: transform 0.5s;
+   font-size: 18px;
+   font-weight: 600;
+   text-shadow:  #3929bc;
+   fill: none;
+}
+.submit button:hover{
+    transform: translateY(-5px);
+    background-color: #5753ca;
+    color: white;
+    font-size: 18px;
+}
+@media screen and (max-width:1180px) {
+    .input-group:nth-child(7){
+        grid-column: 1/6;
+    }
+    .input-group:nth-child(8){
+        grid-column: 6/13;
+    }
+    .input-group:nth-child(9){
+    grid-column: 1/13;
+    }
+    .input-group:nth-child(9) input{
+        text-align: center;
+        font-size: 20px;
+    }
+    .input-group:nth-child(10){
+        grid-column: 1/7;
+    }
+    .input-group:nth-child(11){
+        grid-column: 7/13;
+    }
+}
+@media screen and (max-width:881px) {
+    .form-register{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 16px;
+    }
+    .input-group:nth-child(odd){
+        grid-column: 1/13;
+    }
+    .input-group:nth-child(even){
+        grid-column:1/13;
+    }
+    .form-img{
+        grid-column:1/13;
+    }
+}
+@media screen and (max-width:600px){
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .input-group > .form-control{
+        width: 100%;
+    }
+    .input-group > .form-select{
+        width: 100%;
+    }
+    .span-input-group-text {
+        display: none;
+    }
+    .submit{
+        grid-column: 1/13;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .submit button{
+        font-size: 1rem;
+    }
 }
