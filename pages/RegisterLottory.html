@@ -151,6 +151,12 @@
       </div>
      <div class="form-app bg-white">
         <form method="post" action="/your-submit-endpoint"  class="p-4 form-register" id="form-register"> 
+          <div class="input-group">
+            <label for="username-lastname" class="my-2 input-group-text rounded-2">نام و نام خانوادگی   </label>
+            <input type="text" name="username-lastname" id="username-lastname" class="form-control m-0 m-sm-2 px-3 rounded-2" placeholder="نام ...">
+            <input type="text" name="username-lastname" id="username-lastname" class="form-control m-0 m-sm-2 px-3 rounded-2" placeholder="نام خانوادگی ...">
+            <div class="error" id="error"></div>
+           </div>
            <div class="input-group">
             <label for="title" class="input-group-text rounded-2 my-2">موضوع قرعه کشی </label>
             <input type="text" name="title" id="title" class="form-control m-0 m-sm-2 rounded-2 px-3" placeholder="موضوع قرعه کشی ...">
@@ -190,6 +196,7 @@
            <div class="input-group">
             <label for="date-start" class="my-2 input-group-text rounded-2"> تاریخ برگزاری  </label>
             <input id="date-start" class="form-control m-0 m-sm-2 rounded-2 px-3" data-jdp placeholder=" تاریخ برگزاری ..." >
+            <input id="miladi_date" type="hidden" name="miladiDate">
             <span class="my-2 input-group-text span-input-group-text bg-white text-black border-0 p-1 fs-4 fw-bolder rounded-2">،</span>
             <input id="time-start" class="form-control m-0 m-sm-2 rounded-2 px-3" type="text" data-jdp data-jdp-option-1 placeholder="زمان برگزاری ..." >
             <div class="error" id="error"></div>
@@ -206,6 +213,16 @@
             <div class="error" id="error"></div>
            </div>
            <div class="input-group">
+            <label for="category2" class="input-group-text rounded-2 my-2">کتگوری 2</label>
+            <select name="category2" id="category2" class="form-select rounded-2 m-0 m-sm-2">
+              <option value="">انتخاب کنید</option>
+              <option value="1">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت </option>
+              <option value="2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت </option>
+              <option value="3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت </option>
+            </select>
+            <div class="error" id="error"></div>
+           </div>
+           <div class="input-group">
             <label for="desceription" class="my-2 input-group-text rounded-2">توضیحات</label><br>
             <textarea name="desceription" id="desceription" rows="8" cols="60" class="m-0 m-sm-2 rounded-2"></textarea>
             <div class="error" id="error"></div>
@@ -213,7 +230,7 @@
            <div class="form-img mt-4 align-items-center">
             <span for="image-file" class="input-group-text my-2 rounded-2">انتخاب عکس</span><br>
             <div class="choice-img">
-              <input type="file" class="form-control m-0 m-sm-2 rounded-2 image-file"  id="image-file1" required>
+              <input type="file" class="form-control m-0 m-sm-2 rounded-2 image-file"  id="image-file1">
               <input type="file" class="form-control m-0 m-sm-2 rounded-2 image-file"  id="image-file2">
               <input type="file" class="form-control m-0 m-sm-2 rounded-2 image-file"  id="image-file3"> 
               <input type="file" class="form-control m-0 m-sm-2 rounded-2 image-file"  id="image-file4">  
