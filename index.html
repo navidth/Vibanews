@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="icon" href="assests/img/favicon.png">
   <link rel="stylesheet" href="assests/css/index.css">
+  <link rel="stylesheet" href="assests/css/modalAccount.css">
     <title>قرعه ها – سامانه جامع اطلاع رسانی قرعه کشی ها</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
                       login
                       </span>
                   </button>
-                  <button class="border-0 btn-login d-none" type="button"  id="btn-account">
+                  <button class="border-0 btn-login" type="button"  id="btn-account">
                     <span class="material-symbols-outlined login-desktop">
                       account_circle
                       </span>
@@ -236,6 +237,46 @@
       </div>
     
     </div>
+    <!-- Modal Account........... -->
+    <div class="modal-account" id="overlayAccount">
+      <div class="modal-dialog bg-white rounded-3">
+          <div class="modal-contentt">
+               <!-- Modal Header --> 
+              <div class="modal-header-account align-items-center justify-content-center ">
+                  <div class="panel text-center">
+                      <h4 class="text-center text-white">اطلاعات کاربری</h4>
+                  </div>
+              </div>
+              <div id="modal-body-account" class="modal-body-account">
+                  <div class="mb-4">
+                      <h5> به سایت قرعه ها خوش آمدید !...</h5>
+                  </div>
+                  <hr>
+                  <div class="account-detail">
+                          <div class="detail-account my-2 ">
+                              <h5  class="input-group-text rounded-2 text-center">نام کاربری</h5>
+                              <p id="name" class=" rounded-2 px-3 py-1  fw-bold border-1">نوید طاهری</p>
+                          </div>
+                          <div class="detail-account  my-2">
+                              <h5  class="input-group-text rounded-2">شماره تلفن </h5>
+                              <p id="phone" class="rounded-2 px-3 fw-bold">09104873278</p>
+                          </div>
+                          <div class="detail-account  my-2">
+                              <h5 class="input-group-text rounded-2">ایمیل</h5>
+                              <p id="email" class=" rounded-2 px-3 fw-bold">navidtaheri32@gmail.com</p>
+                          </div>
+                          <hr>
+                          <div class="">
+                                <button type="button" class="btn-account-exit ms-0 mt-2" id="closeLogin" onclick="btnAccount()">
+                                  خروج
+                              </button>
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+  </div>
      <!--............................MAIN..............................-->
      <main class="main">
       <div class="container-fluid page-content">
@@ -433,6 +474,7 @@
      </footer>
     <!-- ................Script...........................................................-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="assests/js/modalAccount.js"></script>
     <script src="../assests/js/persianumber.js"></script>
     <script src="assests/js/index.js">  </script>
     <script src="assests/js/modalLogin.js"></script>

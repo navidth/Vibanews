@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 .main{
   display: grid;
   grid-template-columns: 60% 40%;
@@ -55,6 +58,16 @@
    border: none;
    cursor: pointer;
   }
+  .main-content div:nth-child(1){
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+  }
+ .header-lottory{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 20px;
+ }
 @media screen and (max-width:991.5px) {
     .main{
         display: grid;

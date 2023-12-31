@@ -1,8 +1,22 @@
-function handleLogin(){
-    let btnLogin = document.getElementById('btnLogin')
-    let btnSign = document.getElementById('btnSign')
-    let modalLogin = document.getElementById('modal-body-login')
-    let modalSign = document.getElementById('modal-body-sign')
+let MenuLogin =false;
+const boxLogin = () => {
+    console.log("Login");
+    let loginBox = document.getElementById("btn-login");
+    let overlayLogin = document.getElementById("overlayLogin");
+    if (MenuLogin){
+    overlayLogin.style.height='100%';
+    MenuLogin=false;
+    }else{
+    overlayLogin.style.height='0%';
+    MenuLogin=true;
+    }
+}
+
+function handleLoginn(){
+    let btnLogin = document.getElementById('btnLoginn')
+    let btnSign = document.getElementById('btnSignn')
+    let modalLogin = document.getElementById('modal-body-loginn')
+    let modalSign = document.getElementById('modal-body-signn')
     modalLogin.classList.add('d-block')
     modalLogin.classList.remove('d-none')
     modalSign.classList.add('d-none')
@@ -10,11 +24,11 @@ function handleLogin(){
     btnLogin.classList.add('activeted-btn')
     btnSign.classList.remove('activeted-btn')
 }
-function handleSign(){
-    let btnSign = document.getElementById('btnSign')
-    let btnLogin = document.getElementById('btnLogin')
-    let modalLogin = document.getElementById('modal-body-login')
-    let modalSign = document.getElementById('modal-body-sign')
+function handleSignn(){
+    let btnSign = document.getElementById('btnSignn')
+    let btnLogin = document.getElementById('btnLoginn')
+    let modalLogin = document.getElementById('modal-body-loginn')
+    let modalSign = document.getElementById('modal-body-signn')
 
     modalLogin.classList.remove('d-block')
     modalLogin.classList.add('d-none')
@@ -23,6 +37,7 @@ function handleSign(){
     btnSign.classList.add('activeted-btn')
     btnLogin.classList.remove('activeted-btn')
 }
+
 //...............................Validation form Login................
 const formLogin =document.getElementById('form-login')
 const phoneLogin =document.getElementById('user-phone')
@@ -44,7 +59,7 @@ const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-// validations modal
+// / validations modal
 const validateInputsLogin = () =>{
     const phoneLoginValue = phoneLogin.value.trim();
     const emailLoginValue = emailLogin.value.trim();

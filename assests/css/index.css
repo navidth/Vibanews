@@ -7,6 +7,7 @@
     color: #000;
 }
 body {
+    overflow-x: hidden;
     margin: 0;
     direction: rtl;
     background-color: #F9F9F9;
@@ -46,6 +47,7 @@ body {
 
 .navbar{
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.03);
+    width: 100vw;
 }
 .navbar-nav{
     margin-left: 100px;
@@ -120,7 +122,7 @@ body {
 }
 .overlay {
     height:0px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -129,7 +131,6 @@ body {
     overflow-y: hidden;
     transition: 0.5s;
   }
-
  .form-search{
     position: relative;
     top: 8%;
@@ -192,6 +193,16 @@ input[type=search]:focus{
   }
   .form a{
     font-size : 12px
+  }
+  .address{
+    margin: 0px 88px 0px 95px;
+    background-color: white;
+  }
+  .span2,.span1{
+     color:rgba(33, 37, 41, 0.75);
+  }
+  .span2:hover{
+    color: rgb(9, 9, 10)
   }
   .modal-header{
     padding: 0px;
@@ -282,9 +293,6 @@ input[type=search]:focus{
     border: 0px;
     border-bottom: 1px solid rgba(0, 0, 0,0.1);
 }
-.li-lottory div a{
-    margin-left: -65px;
-}
 .date{
     margin: 5px 0 0 0;
     color: #999;
@@ -307,7 +315,7 @@ input[type=search]:focus{
  .footer-columns{
     padding-top: 40px;
     display:grid;
-    grid-template-columns: 5fr 4fr 2fr;
+    grid-template-columns: repeat(2,1fr);
  }
  .slogan-p p{
     font-size: 13px;
@@ -388,6 +396,10 @@ input[type=search]:focus{
     .Notifications{
         bottom: 0px;
     }
+    .address{
+        margin: 0px 00px 0px 00px;
+        background-color: white;
+      }
    .navigation-tablet{
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -396,7 +408,7 @@ input[type=search]:focus{
     position: fixed;
     bottom: 0;
     background-color: #5b57c9;
-    width: 100%;
+    width: 100vw;
     height: auto;
     z-index: 999;
     padding: 0px 20px
@@ -465,7 +477,7 @@ input[type=search]:focus{
         position: fixed;
         bottom: 0;
         background-color: #5b57c9;
-        width: 100%;
+        width: 100vw;
         height: auto;
         z-index: 999;
         padding: 0px 2px
