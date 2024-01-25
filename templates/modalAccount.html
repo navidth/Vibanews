@@ -1,0 +1,42 @@
+{% block modalAccount %}
+<!-- .................modal Account............... -->
+    <div class="modal-account" id="overlayAccount">
+        <div class="modal-dialog bg-white rounded-3">
+            <div class="modal-contentt">
+                 <!-- Modal Header --> 
+                <div class="modal-header-account align-items-center justify-content-center ">
+                    <div class="panel text-center">
+                        <h4 class="text-center text-white">اطلاعات کاربری</h4>
+                    </div>
+                </div>
+                <div id="modal-body-account" class="modal-body-account">
+                    <div class="mb-4">
+                        <h5> به سایت قرعه ها خوش آمدید !...</h5>
+                    </div>
+                    <hr>
+                    <div class="account-detail">
+                            <div class="detail-account my-2 ">
+                                <h5  class="input-group-text rounded-2 text-center">نام کاربری</h5>
+                                <p id="name" class=" rounded-2 px-3 py-1  fw-bold border-1">{{ request.user.get_full_name }}</p>
+                            </div>
+                            <div class="detail-account  my-2">
+                                <h5  class="input-group-text rounded-2">شماره تلفن </h5>
+                                <p id="phone" class="rounded-2 px-3 fw-bold">{{ request.user.phone_number }}</p>
+                            </div>
+                            <div class="">
+                                <a href="{% url 'logout' %}" class="text-decoration-none"><button type="button" class="btn-account-logout ms-0" id="closeLogin">
+                                    خروج از اکانت </button>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="">
+                                <button type="button" class="btn-account-exit ms-0 mt-2 text-decoration-none" id="closeLogin" onclick="btnAccount()">
+                                    خروج  </button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+{% endblock %}

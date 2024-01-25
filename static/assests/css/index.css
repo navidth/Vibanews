@@ -1,0 +1,513 @@
+@font-face {
+    font-family: sans;
+    src: url('../fonts/Sans a4fran3.eot') format('embedded-opentype'), url('../fonts/Sans a4fran3.ttf') format('truetype'), url('../fonts/Sans a4fran3.woff') format('woff');
+}
+*{
+    box-sizing: border-box;
+    color: #000;
+}
+body {
+    overflow-x: hidden;
+    margin: 0;
+    direction: rtl;
+    background-color: #F9F9F9;
+    font-family: sans, 'sans-serif';
+    width: 100%;
+}
+.navbartop{
+    background-color: #5b57c9;
+    color:#fff;
+    width: 100vw;
+    height: 57px;
+}
+.Notifications{
+    position: relative;
+    bottom: 8px;
+}
+.Notifications p , .Notifications a{
+    font-size: 12px;
+    color: #fff !important;
+    text-decoration: none;
+}
+.registration .btn-register{
+    width: max-content;
+    margin: 0.5rem 1.5rem;
+    background-color: #3929bc;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 9px 24px;
+    border-radius: 10px;
+    text-align: center;
+}
+.btn-register:hover{
+    font-weight: bold;
+    background-color: #3524af;
+}
+
+.navbar{
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.03);
+    width: 100vw;
+}
+.navbar-nav{
+    margin-left: 100px;
+}
+.activeted{
+    color: #3929bc;
+    fill: #3929bc;
+}
+.nav-item:not(:last-of-type) .nav-link::after {
+    content: "";
+    border-left:1px dotted #D6D6D6;
+    margin-right: 14px;
+}
+.item-menu{
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.1mm;
+}
+.item-menu:hover{
+    color: #3929bc;
+    fill: #3929bc;
+    transition: .4s;
+    transform: scale(1.2);
+}
+.navbar-toggler{
+    border: 0;
+}
+.btn-search{
+    background-color: inherit;
+    text-align: center;
+}
+.btn-login{
+    background-color: inherit;
+    text-align: center;
+}
+.search-desktop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background-color: #7B78E8;
+    color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+.search-desktop:hover{
+    font-weight: bold;
+    transform: translateY(-5px);
+}
+
+.login-desktop{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background-color: #7B78E8;
+    color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.5s;
+    font-size: 26px;
+    padding-right: 0px;
+}
+
+.login-desktop:hover{
+    font-weight: bold;
+    transform: translateY(-5px);
+}
+.overlay {
+    height:0px;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.8);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+ .form-search{
+    position: relative;
+    top: 8%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .closeSearch{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+  }
+  .closeSearch:hover {
+    color: #ccc;
+  }
+  .overlay input[type=search] {
+   border:1px solid #5b57c9;
+   border-radius: 16px;
+   padding: 15px;
+   font-size: 17px;
+   border: none;
+   float: left;
+   width: 80%;
+   background: white;
+   overflow: visible;
+  }
+input[type=search]:focus{
+   outline: 0;
+   color: inherit;
+  } 
+  .overlay input[type=search]:hover {
+    background: #f1f1f1;
+  }
+  .form-search button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-color: inherit;
+   position: absolute;
+   margin-right: 75%;
+   border-top-left-radius: 16px;
+   border-bottom-left-radius: 16px;
+   background-color: #7B78E8;
+   width: 8%;
+   height:-webkit-fill-available;
+   padding: 16.5px;
+   font-size: 17px;
+   border: none;
+   cursor: pointer;  
+}
+  .form input{
+    width:75%
+  }
+  .form a{
+    font-size : 12px
+  }
+  .address{
+    margin: 0px 88px 0px 95px;
+    background-color: white;
+  }
+  .span2,.span1{
+     color:rgba(33, 37, 41, 0.75);
+  }
+  .span2:hover{
+    color: rgb(9, 9, 10)
+  }
+  .modal-header button{
+    border: 0px;
+    width: 100%;
+    text-align: center;
+    padding: var(--bs-modal-header-padding);
+  }
+  .modal-header button:hover{
+    transition: 0.5s;
+    background-color:#5241d5;
+    color: white;
+  }
+  .error{
+    color: var(--bs-danger);
+    font-size: 12px;
+  }
+  .btn-submit{
+    all: unset;
+    background : #5241d5;
+    color : white;
+    padding:10px 20px;
+    border-radius: 12px;
+    margin: 0px 0px 0px auto;
+  }
+  .btn-submit:hover{
+    background: #2a1c9a;
+  }
+  .navigation-tablet{
+    display: none;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+}
+  .header img{
+    width: 90%;
+    border-radius: 16px;
+  }
+.page-content{
+    max-width: 1127px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.main-box{
+    padding: 17px;
+}
+.header-main{
+    background-color: #3929BC;
+    border-radius: 25px;
+    padding: 15px 30px 15px 15px;
+}
+.header-main h2{
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+.text-header::before{
+    z-index: 0;
+    content: "";
+    width: 25px;
+    height: 25px;
+    rotate: 45deg;
+    border-radius: 7px;
+    background-color: #7B78E8;
+    position: absolute;
+    margin-right: -40px;
+}
+.ul-lottory{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-right: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+.li-lottory{
+    border: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0,0.1);
+}
+.date{
+    margin: 5px 0 0 0;
+    color: #999;
+}
+.title-lottory a{
+   font-size: 14px;
+   font-weight: 700;
+   color:#444;
+}
+.title-lottory a:hover{
+    color:black;
+ }
+ .carousel-indicators button{
+    background-color: var(--bs-dark);
+ }
+ .footer{
+    width: 100vw;
+    background-color:var(--bs-dark);
+ }
+ .footer-columns{
+    padding-top: 40px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+ }
+ .slogan-p p{
+    font-size: 13px;
+    color: #999;
+ }
+ .last-lottory .list-group li{
+    border:0px;
+    border-radius: 0px;
+    background-color: var(--bs-dark);
+    padding: 0px;
+}
+.list-group-item div a{
+    font-size: 13px;
+    color: #fff;
+    border-right:6px dashed #6460d8;
+    padding: 0px 5px 0px 0px;
+    opacity: 0.8;
+}
+.list-group-item div a:hover{
+    font-size: 14px;
+    opacity: 1;
+    font-weight: bolder;
+}
+.list-group-item div p{
+    font-size: 11px;
+    padding-right: 15px;
+    margin-top: 0px;
+}
+.register-lottory a{
+    color: #fff;
+    border-bottom: 1px solid #6460d8;
+    padding:0.2rem 0px;
+}
+.register-lottory a:hover{
+    color: #5241d5;
+}
+/* ........................MEDIA QUARY lg */
+@media screen and (max-width:991.5px) {
+    .navbar-nav{
+        margin-left: 0px;
+        padding-right: 0px;
+    }
+    .item-menu{
+        padding-right: 20px;
+    }
+    .nav-item:not(:last-of-type) .nav-link{
+        border-bottom: 0.1px dotted #D6D6D6;
+    }
+    .search,.closebtn,.menu-btn{
+        margin-left: 17px;
+        color: white;
+        line-height: 1;
+        font-weight: bold;
+        background-color: #7B78E8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.25em;
+        cursor: pointer;
+        border: 0 solid;
+        border-radius: 8px;
+        font-size:28px;
+        width: 42px;
+        height: 42px;
+    }
+    .search{
+        margin-left: 0px;
+    }
+    .nav-item:not(:last-of-type) .nav-link::after {
+        content: "";
+        border-left:1px dotted #D6D6D6;
+        margin-right: 14px;
+        display: none;
+    }
+}
+/* ........................MEDIA QUARY TABLET MODE */
+@media screen and (max-width:767.5px) {
+    .Notifications{
+        bottom: 0px;
+    }
+    .address{
+        margin: 0px 00px 0px 00px;
+        background-color: white;
+      }
+   .navigation-tablet{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    background-color: #5b57c9;
+    width: 100vw;
+    height: auto;
+    z-index: 999;
+    padding: 0px 20px
+   }
+   .p-item-menu{
+    text-align: center;
+    font-size: 12px;
+   }
+   .circle{
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    bottom: 55%;
+    animation-name: scaleAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+   }
+   @keyframes scaleAnimation {
+    0%, 100% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+}
+.text-header{
+    font-size: 16px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+}
+  .header img{
+    width:100vw;
+    border-radius: 16px;
+  }
+  .ul-lottory{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer-columns{
+    padding-top: 20px;
+    display:flex;
+    flex-direction: column;
+    gap: 40px;
+ }
+ .material-symbols-outlined{
+  font-size: 30px;
+}
+}
+/* .........................MEDIA QUARY Lg MOBILE */
+@media screen and (max-width:521px) {
+    .list-group{
+        margin-left: 0px;
+     }
+     .navigation-tablet{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        align-items: center;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        background-color: #5b57c9;
+        width: 100vw;
+        height: auto;
+        z-index: 999;
+        padding: 0px 2px
+       }
+    .p-item-menu{
+        font-size: 10px;
+    }
+    }
+/* ........................MEDIA QUARY Md Mobile */
+@media screen and (max-width:375.5px) {
+    .registration .btn-register{
+        margin: 8px 5px;
+        background-color: #3929bc;
+        color: #fff;
+        font-weight: 500;
+        font-size: 13px;
+        padding: 9px 24px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .menu-btn, .closebtn{
+        margin-left: 0px;
+    }
+   .title-lottory{
+    width: 80%;
+   }
+   .navigation-tablet p{
+    font-size: 7px;
+    margin-bottom: 0.5rem;
+}
+}
+/* .........................MEDIA QUARY SM MOBILE */
+/* .........................MEDIA QUARY XSM MOBILE */
+@media screen and (max-width:320px){
+    .div-button-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+}

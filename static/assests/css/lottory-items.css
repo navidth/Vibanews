@@ -1,0 +1,291 @@
+body{
+    overflow-x: hidden;
+}
+.overlay-login{
+    height:0px;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.8);
+    overflow-y: hidden;
+    transition: 0.5s;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-header button{
+    border: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1rem;
+  }
+.modal-bodyy{
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+#mainModal{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding: 20px 0px 0px 0px;
+    gap: 0px;
+}
+.image-asli{
+    margin: 20px auto;
+    border-radius:3rem;
+    width: 100%;
+    padding: 0px 20px;
+    
+}
+.image-asli img{
+    margin: 20px auto;
+    border-radius: 3rem;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.link-socialmedia:hover{
+    font-weight: bold;
+    transition: transform 0.5s;
+    transform: translateY(-10px);
+}
+.gallery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    position: relative;
+    bottom: 20px;
+    margin: 0px 0px -35px 0px;
+}
+.gallery__item {
+    width: fit-content;
+    cursor: pointer;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    border-radius: 16px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery__item img:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.733);
+    margin-top: -1px;
+    animation: zoom 0.3s ease-in-out;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.modal img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.closeBtn {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.closeBtn:hover {
+    color: rgb(255, 255, 255);
+}
+
+.alert{
+    width: 15vw;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    background-color: var(--bs-dark);
+    position: absolute;
+    right: 350px;
+    margin-top:150px;
+    opacity: 0.7;
+}
+.alert p {
+    font-size: 14px;
+    color: var(--bs-light);
+}
+.detail-lottory span,.detail-lottory label{
+    opacity: 0.8;
+    font-size: 14px;
+}
+.detail-lottory{
+    gap: 20px;
+}
+.total-value{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.total-price span{
+    font-size: 20px;
+}
+.parageragh-lottory p{
+    font-size: 14px;
+}
+@media (max-width: 950px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        bottom: 50px;
+    }
+    .image-asli img{
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+    #mainModal{
+        grid-template-rows: 550px;
+    }
+    .gallery__item{
+        width: 120px;
+        height: 120px;
+    }
+    .gallery__item img {
+        width: 20vw;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 620px) {
+    .modal-dialog {
+        width: 100vw;
+        height: 100%;
+        max-width: none;
+        margin: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #mainModal{
+        grid-template-rows: 590px;
+    }
+    .image-asli{
+        height: 100%;
+    }
+    .image-asli img {
+        width: 90%;
+        height: 70%;
+    }
+    .modal img {
+        width: 75%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        gap: 60px;
+        bottom: 70px;
+    }
+    .gallery__item{
+        width: 120px;
+        height: 120px;
+    }
+    .gallery__item img {
+        width: 100%;
+        height: 100%;    
+        object-fit: cover;
+        transition: 0.3s ease-in-out;
+    }
+    .alert{
+        width: 20vw;
+        text-align: center;
+        padding: 10px 0px 0px 0px;
+        background-color: var(--bs-dark);
+        position: absolute;
+        right: 0;
+        margin-top:150px;
+        opacity: 0.8;
+    }
+    .alert p {
+        font-size: 10px;
+        color: var(--bs-light);
+    }
+}
+@media screen and (max-width:400px) {
+    body{
+        width: 100%;
+    }
+    #mainModal{
+        grid-template-rows: 490px;
+    }
+    .detail-lottory span,.detail-lottory label{
+        opacity: 0.8;
+        font-size: 14px;
+    }
+    .detail-lottory{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .image-asli{
+        margin: 20px auto;
+        width: 100%;
+        padding: 20px 20px;
+    }
+    .image-asli img{
+        border-radius: 0rem;
+        width: 90%;
+        height: 70%;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        gap: 30px;
+        bottom: 70px;
+        margin: 0px 0px -50px;
+    }
+    .gallery__item {
+        width: 90px;
+        height: 90px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 0px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+    .gallery__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s ease-in-out;
+    }
+    .modal img {
+        width: 75%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+}

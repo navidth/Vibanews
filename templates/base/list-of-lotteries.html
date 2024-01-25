@@ -1,0 +1,14 @@
+{% block LotteryList %}
+    {% for lottery in lotteries %}
+        <li class="li-lottory">
+            <div class="mb-2 d-flex align-items-end">
+                <a href=""> <img src="{{ lottery.pictures_set.first.pictureFile.url }}" alt="lottry-img"
+                                 class="w-50 rounded-4"> </a>
+                <div class="title-lottory">
+                    <a href="" class="mx-2 text-decoration-none">{{ lottery.title }}</a>
+                    <p class="date mx-2" id="date">{{ lottery.holdingDate.date }}</p>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+{% endblock %}

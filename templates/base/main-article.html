@@ -1,0 +1,22 @@
+{% load static %}
+{% block mainArticle %}
+<div class="article">
+    <div class="search-box d-none d-md-flex flex-column bg-white rounded rounded-5">
+        <div class="my-4">
+            <h6 class="fw-bold"> دنبال چه چیزی میگردی؟</h6>
+        </div>
+        <div class="mx-3 mb-4">
+            <form action="{% url 'search_page' %}" class="formm-search">
+                <input type="search" placeholder="جستجو کنید" name="search" id="search" class='search-article'>
+                <button type="submit" class='btn-article'><label for="search" class="material-symbols-outlined">search</label></button>
+            </form>
+        </div>
+    </div>
+    <!--............................ADS..............................-->
+    <div class="ads mt-0 mt-md-5 align-items-center justify-content-center d-flex flex-column bg-white rounded-5">
+        <img src="{% static 'assests/img/ads.png' %}" alt="ads" class="img my-5 w-75 rounded-4">
+        <img src="{% static 'assests/img/ads.png' %}" alt="ads" class="img mb-5 w-75 rounded-4">
+
+    </div>
+</div>
+{% endblock mainArticle %}

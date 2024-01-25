@@ -1,0 +1,150 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}قرعه ها | جزئیات {% endblock %}
+{% block bigTitle %}جزئیات قرعه{% endblock bigTitle %}
+{% block csslinks %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="icon" href="{% static 'assests/img/favicon.png' %}">
+    <link rel="stylesheet" href="{%static 'assests/css/modalAccount.css' %}">
+    <link rel="stylesheet" href="{% static 'assests/css/Pages.css' %}">
+    <link rel="stylesheet" href="{% static 'assests/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'assests/css/lottory-items.css' %}">
+{% endblock %}
+{% block content %}
+<!--............................MAIN..............................-->
+<main class="main mt-5" style="overflow-x: hidden;">
+    <!--............................MAIN CONTENT..............................-->
+    <div class="main-content">
+        <div id="mainModal" class="py-3 bg-white rounded-5">
+            <div class="image-asli">
+                <img src="{{ lottery.pictures_set.first.pictureFile.url }}" alt="" width="85%" height="85%">
+            </div>
+            <div class="gallery px-5">
+                {% for picture in lottery.pictures_set.all %}
+                    {% if forloop.counter != 1 %}
+                        <div class="gallery__item">
+                            <img src="{{ picture.pictureFile.url }}" alt=""/>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <hr>
+            <!-- ............................ NAME LOTTORY............................. -->
+            <div class="d-flex mt-2 mb-3 px-5 justify-content-between align-items-center">
+                <div class="name">
+                    <h4>{{ lottery.title }}</h4>
+                </div>
+                <div class="share ms-3">
+                            <span id="sharecompose" class="material-symbols-outlined text-bg-dark rounded-4"
+                                  style="padding: 10px; cursor: pointer; font-size: 24px;">
+                            share
+                            </span>
+                </div>
+                <!-- ...................ALERT MASSAGE..................... -->
+                <div id="alert" class="alert mx-auto d-none ">
+                    <p>لینک کپی شد</p>
+                </div>
+            </div>
+            <!-- .............................DETAIL LOTTORY............................... -->
+            <div class="d-flex text-dark justify-content-md-start justify-content-between px-5 detail-lottory">
+                <div class="date-lottory d-flex">
+                            <span class="material-symbols-outlined text-dark" style="font-size: 20px; opacity: 0.7;">
+                              event
+                              </span>
+                    <label for="pDate" class="mx-1">تاریخ انتشار: </label>
+                    <span id="pDate" class="mx-1">{{ lottery.createDate.date }}</span>
+                </div>
+                <div class="code-news d-flex">
+                            <span class="material-symbols-outlined" style="font-size: 20px; opacity: 0.7;">
+                              barcode_scanner
+                              </span>
+                    <label for="pDate" class="mx-1">کد خبر : </label>
+                    <span id="pDate" class="mx-1">{{ lottery.id }}</span>
+                </div>
+            </div>
+        </div>
+        <!--..........................TOTAL VALUE................... -->
+        <div class="bg-white my-3 py-3 total-value rounded-5">
+            <div class="d-flex flex-column mt-2">
+                <div class="d-flex opacity-75 mx-3">
+                        <span class="material-symbols-outlined ps-2">
+                        credit_card
+                        </span>
+                    <h5>مجموع ارزش ریالی جوایز </h5>
+                </div>
+                <div id="total-price" class="total-price text-start mx-3">
+                    <span>{{ lottery.totalPrize }}</span>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex flex-column mt-2">
+                <div class=" d-flex opacity-75 mx-3">
+                        <span class="material-symbols-outlined ps-2">
+                          calendar_month
+                          </span>
+                    <h5> تاریخ قرعه کشی</h5>
+                </div>
+                <div id="date-lottory" class=" total-price text-start mx-3 ">
+                    <span>{{ lottery.holdingDate.date }}</span>
+                </div>
+            </div>
+        </div>
+        <!-- ..........................ABOUT LOTTORY................. -->
+        <div class="bg-white my-3 py-3 rounded-5 about-lottory opacity-75">
+            <div class="d-flex mt-2 mx-3 mb-2">
+                      <span class="material-symbols-outlined ms-2">
+                        preview
+                        </span>
+                <h4 class="fw-bold"> متن خبر </h4>
+            </div>
+            <div class="me-3 mb-3"><h6>نحوه شرکت در قرعه کشی</h6></div>
+            <div class="parageragh-lottory px-3" style="opacity: 0.8;">
+                <p>{{ lottery.description }}</p>
+            </div>
+        </div>
+{#        {% if lottery.socialmedia %}#}
+            <!-- ..........................CONNECT WITH ME................ -->
+            <div class="bg-white my-3 py-3 rounded-5 about-lottory ">
+                <div class="d-flex mt-2 mx-3 opacity-75">
+                      <span class="material-symbols-outlined ms-0">
+                        sensors
+                        </span>
+                    <h4>ارتباط با مجموعه</h4>
+                </div>
+                <div class="m-4" style="display: grid; grid-template-columns: repeat(1,1fr);">
+                    {% if lottery.socialmedia.telegram %}
+                        <a href="{{ lottery.socialmedia.telegram }}"
+                           class="link-socialmedia text-decoration-none d-flex align-items-center">
+                            <i class="bi bi-telegram text-primary ms-2" style="font-size: 20px;"></i>
+                            <span style="font-size: 14px;"> تلگرام مجموعه</span>
+                        </a>
+                        <hr>
+                    {% endif %}
+                    {% if lottery.socialmedia.website %}
+                        <a href=""
+                           class=" link-socialmedia text-decoration-none d-flex align-items-center">
+                        <span class="material-symbols-outlined ms-2 text-success" style="font-size: 20px;">
+                          public
+                          </span>
+                            <span style="font-size: 16px;">وب سایت مجموعه</span>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            </div>
+{#        {% endif %}#}
+    <!--............................MAIN ARTICLE..............................-->
+    {% include 'base/main-article.html' %}
+</main>
+{% endblock %}
+
+{% block jslink %}
+    <script src="{% static 'assests/js/modal.js' %}"></script>
+    <script src="{% static 'assests/js/index.js' %}"></script>
+    <script src="{% static 'assests/js/modalAccount.js' %}"></script>
+    <script src="{% static 'assests/js/persianumber.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+{% endblock %}
+
+</body>
